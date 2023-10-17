@@ -57,7 +57,7 @@ chatgpt.smessage("You are an AI assistant...")
 chatgpt.add_function(python)
 
 print("################################################")
-print("# Python CodeInterpreter by Unconventional Coding #")
+print("#           Python CodeInterpreter             #")
 print("################################################\n")
 
 print("GPT: Hello! I am the Python CodeInterpreter! What would you like to do?\nYou: ")
