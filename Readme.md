@@ -2,10 +2,10 @@
 
 This the python version of the code as implemented by [Unconventional Coding.](https://github.com/unconv/code-interpreter)
 
-Python CodeInterpreter leverages OpenAI's ChatGPT to interact with Python code seamlessly. It allows users to submit Python code, decide whether to run it, and receive the code's output.
+Python CodeInterpreter leverages OpenAI's ChatGPT to interact with Python code seamlessly. It allows users to submit a prompt and ChatGPT will propose Python code to run. The user can decide whether to run it, and receive the code's output.
 
 ## Features:
-1. **Interactive Python Code Execution**: After entering your Python code, the system will ask if you want to run it. Upon your confirmation, it will be executed.
+1. **Interactive Python Code Execution**: After entering your prompt, the system will ask if you want to run the Python code. Upon your confirmation, it will be executed.
 2. **Integration with ChatGPT**: The system uses a Python implementation of ChatGPT for interactive dialogue.
 3. **Function Handling with OpenAI**: Allows the addition and handling of functions with OpenAI's ChatGPT.
 4. **Modular Design**: Easily extendable with more features.
@@ -30,7 +30,7 @@ Python CodeInterpreter leverages OpenAI's ChatGPT to interact with Python code s
 1. Ensure you have the required libraries installed, such as `requests` and `re`.
 2. Provide your `OPENAI_API_KEY` as an environment variable.
 3. Run the main script to start the Python CodeInterpreter.
-4. Enter Python code and decide whether to execute it based on the prompts.
+4. Enter a prompt and decide whether to execute the code given by ChatGPT.
 
 ```bash
 # Sample Interaction:
@@ -40,7 +40,7 @@ Python CodeInterpreter leverages OpenAI's ChatGPT to interact with Python code s
 ################################################
 
 GPT: Hello! I am the Python CodeInterpreter! What would you like to do?
-You: <Enter Your Python Code>
+You: <Enter Your Prompt Here>
 ```
 
 5. Type "exit", "quit", or "stop" to end the interaction.
