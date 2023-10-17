@@ -42,10 +42,12 @@ class ChatGPT:
         else:
             self.function_call = {"name": function_name, "arguments": arguments}
 
-    def _add_message(self, role: str, content: Optional[str] = None, function_call: Optional[dict] = None):
+    def _add_message(self, role: str, content: Optional[str] = None, function_call: Optional[dict] = None, function_name: Optional[dict] = None):
         message = {"role": role, "content": content}
         if function_call:
             message["function_call"] = function_call
+        if function_name:
+            message["name"] = function_name
         self.messages.append(message)
         if callable(self.savefunction):
             self.savefunction(message, self.chat_id)
@@ -63,7 +65,7 @@ class ChatGPT:
         self._add_message("assistant", None, {"name": function_name, "arguments": function_arguments})
 
     def fresult(self, function_name: str, function_return_value: str):
-        self._add_message("function", function_return_value, {"name": function_name})
+        self._add_message("function", function_return_value, function_name=function_name)
 
     def response(self, raw_function_response: bool = False):
         fields = {"model": self.model, "messages": self.messages}
