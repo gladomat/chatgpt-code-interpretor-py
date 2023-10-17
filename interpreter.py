@@ -60,7 +60,7 @@ print("################################################")
 print("#           Python CodeInterpreter             #")
 print("################################################\n")
 
-print("GPT: Hello! I am the Python CodeInterpreter! What would you like to do?\nYou: ")
+print("GPT: Hello! I am the Python CodeInterpreter! What would you like to do?\nYou: ", end="")
 
 while True:
     message = input_message()
@@ -75,4 +75,4 @@ while True:
 
     # Assuming the Python version of ChatGPT has a method 'umessage' and 'response'
     chatgpt.umessage(message)
-    print("\n\nGPT:", chatgpt.response()['content'], "\nYou: ")
+    print("\n\nGPT:", chatgpt.response()['content'], "\nYou: ", end="")
